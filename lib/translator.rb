@@ -14,7 +14,11 @@ end
 
 def get_japanese_emoticon(library, english_emoticon)
   emoticon_hash = load_library(library)
-  emoticon_hash
+  emoticon_hash.each do |emotion, languages|
+    if languages.has_value?(english_emoticon)
+      return emotion 
+    end
+  end
 end
 
 def get_english_meaning

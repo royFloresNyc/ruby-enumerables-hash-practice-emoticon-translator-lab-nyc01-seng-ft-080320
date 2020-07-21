@@ -16,7 +16,7 @@ def get_japanese_emoticon(library, english_emoticon)
   emoticon_hash = load_library(library)
   emoticon_hash.each do |emotion, languages|
     if languages.has_value?(english_emoticon)
-      return emotion[:japanese]
+      return emotion
     end
   end
 end

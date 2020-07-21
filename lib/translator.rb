@@ -12,8 +12,9 @@ def load_library(library)
   yml_hash
 end
 
-def get_japanese_emoticon
- 
+def get_japanese_emoticon(library, english_emoticon)
+  emoticon_hash = load_library(library)
+  emoticon_hash
 end
 
 def get_english_meaning
